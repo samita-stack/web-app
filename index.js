@@ -90,9 +90,7 @@ app.get("/expenses", requiresAuth(), async (req, res, next) => {
      },
    });
    // 👆 end of changes 👆
-   res.render("expenses", {
-     user: req.oidc && req.oidc.user,
-     expenses: expenses.data,
+   
    });
  } catch (err) {
    next(err);
